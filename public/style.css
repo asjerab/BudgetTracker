@@ -1,0 +1,305 @@
+body {
+  padding: 20px;
+  background-color: #eff0f0;
+  overflow-x: hidden;
+}
+
+@font-face {
+  font-family: "AeonikTRIAL-Regular";
+  src: url(/public/fonts/Gilroy-Regular.ttf);
+}
+
+@font-face {
+  font-family: "AeonikTRIAL-Light";
+  src: url(/public/fonts/AeonikTRIAL-Light.otf);
+}
+
+.primaryRegular {
+  font-family: "AeonikTRIAL-Regular";
+}
+.primaryLight {
+  font-family: "AeonikTRIAL-Light";
+}
+
+.container {
+  width: 100%;
+}
+
+.navWrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.navWrapperSvg {
+  width: 100%;
+  max-width: 50px;
+}
+
+.cardHero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80dvh;
+}
+
+.cardHeroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 19.5rem;
+}
+
+.cardHeroContent p {
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+.cardHeroContent button {
+  padding: 0.625rem 2.1875rem;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.cardHeroContent:active button {
+  transform: scale(0.9);
+}
+
+.budgetModal {
+  display: none;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  background-color: #ffffff;
+  border-radius: 1.75rem 1.75rem 0rem 0rem;
+  height: 350px;
+}
+
+.budgetModalContent {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 35dvh;
+}
+
+.budgetModalContent h1 {
+  color: #000;
+  text-align: center;
+  -webkit-text-stroke-width: 0.09000000357627869;
+  -webkit-text-stroke-color: #000;
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 0;
+}
+
+.budgetModalContent input {
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  width: 20.25rem;
+  height: 2.5rem;
+  flex-shrink: 0;
+  margin: 10px;
+}
+
+.budgelModalNav {
+  display: flex;
+  justify-content: flex-end;
+  padding: 25px;
+}
+
+.budgetModal button {
+  padding: 0.625rem 2.1875rem;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+}
+
+.budgetModal:active button {
+  transform: scale(0.9);
+}
+
+.menuBottom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 6.25rem;
+  flex-shrink: 0;
+  border-top: 1.5px solid #eff0f0;
+  background: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.menuBottom svg {
+  width: 2.5rem;
+  height: 2.5rem;
+  padding: 2px;
+  background-color: black;
+  border-radius: 100%;
+  animation: 300ms ease-in-out;
+}
+
+.menuBottom:active svg {
+  transform: scale(0.9);
+}
+
+.budgetOverviewWrapper {
+  padding-left: 25px;
+  padding-right: 25px;
+  padding-bottom: 25px;
+}
+
+.budgetOverviewNav p {
+  color: #909090;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 0;
+  margin: 0;
+}
+
+.budgetOverviewSubWrapper {
+  display: flex;
+  justify-content: space-between;
+  justify-content: baseline;
+  align-items: baseline;
+  padding: 0;
+  margin: 0;
+}
+
+.budgetOverviewSubWrapper h1 {
+  color: #222;
+  -webkit-text-stroke-width: 2;
+  -webkit-text-stroke-color: #000;
+  font-size: 3.125rem;
+  font-style: normal;
+  font-weight: 800;
+  line-height: normal;
+  line-height: 0;
+}
+
+.budgetOverviewSubWrapper p {
+  color: #909090;
+  font-size: 1.0625rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  line-height: 0;
+}
+
+.expenssesWrapper {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.expenssesContainer {
+  width: 24.5625rem;
+  height: 27.3125rem;
+  flex-shrink: 0;
+  border-radius: 1.75rem 1.75rem 0rem 0rem;
+  background: #fff;
+  padding: 25px;
+}
+
+.expenssesContainer p {
+  color: #000;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.settings {
+  display: none;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  top: 0;
+  right: 0;
+  z-index: 100;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.settingBackButton button {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  gap: 5px;
+  border: none;
+  color: #000;
+  font-family: "Neue Haas Grotesk Display Pro";
+  font-size: 1.225rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  animation: 300ms ease-in-out;
+}
+
+.settingBackButton :active {
+  transform: scale(0.9);
+}
+
+.settingsContentWrapper {
+  margin-top: 2.5%;
+}
+
+.settingsContentWrapper button {
+  width: 100%;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #222;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.settingsContentWrapper:active button {
+  transform: scale(0.9);
+}
+
+.settingsLogOutWrapper button {
+  width: 100%;
+  height: 2.5rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #c53030;
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.settingsLogOutWrapper:active button {
+  transform: scale(0.9);
+}
+
+.settingsLogOutWrapper {
+  width: 85%;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/script.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navWrapper">
+        <h1 class="primaryRegular">Welcome, asjer</h1>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-6 navWrapperSvg"
+          id="openSettings"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          />
+        </svg>
+      </nav>
+
+      <div class="settings" id="settings">
+        <nav class="navWrapper">
+          <h1 class="primaryRegular">Welcome, asjer</h1>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="size-6 navWrapperSvg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+            />
+          </svg>
+        </nav>
+        <div class="settingBackButton">
+          <button id="closeSettings">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="10"
+              height="18"
+              viewBox="0 0 10 18"
+              fill="none"
+            >
+              <path
+                d="M8.75 16.5L1.25 9L8.75 1.5"
+                stroke="black"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <p class="primaryRegular">Back</p>
+          </button>
+        </div>
+
+        <div class="settingsContentWrapper">
+          <a href="./index.html">
+            <button class="primaryRegular">Change budget</button>
+          </a>
+        </div>
+
+        <div class="settingsLogOutWrapper">
+          <button class="primaryRegular">Log out</button>
+        </div>
+      </div>
+
+      <div class="cardHero">
+        <div class="cardHeroContent">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="88"
+            height="68"
+            viewBox="0 0 88 68"
+            fill="none"
+          >
+            <path
+              d="M3.375 18.375H84.625M3.375 21.5H84.625M15.875 43.375H40.875M15.875 52.75H28.375M12.75 65.25H75.25C77.7364 65.25 80.121 64.2623 81.8791 62.5041C83.6373 60.746 84.625 58.3614 84.625 55.875V12.125C84.625 9.6386 83.6373 7.25403 81.8791 5.49587C80.121 3.73772 77.7364 2.75 75.25 2.75H12.75C10.2636 2.75 7.87903 3.73772 6.12087 5.49587C4.36272 7.25403 3.375 9.6386 3.375 12.125V55.875C3.375 58.3614 4.36272 60.746 6.12087 62.5041C7.87903 64.2623 10.2636 65.25 12.75 65.25Z"
+              stroke="#222222"
+              stroke-width="5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+          <p class="primaryRegular">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+            cursus mattis arcu eget pellentesque. Pellentesque eu ultrices odio,
+            molestie ullamcorper risus.
+          </p>
+          <button class="primaryRegular" id="newBudgetButton">
+            New budget
+          </button>
+        </div>
+      </div>
+
+      <div class="budgetModal" id="budgetModal">
+        <nav class="budgelModalNav">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="30"
+            height="30"
+            viewBox="0 0 30 30"
+            fill="none"
+            id="closeBudgetModal"
+          >
+            <path
+              d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
+              stroke="black"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </svg>
+        </nav>
+        <div class="budgetModalContent">
+          <h1 class="primaryRegular">What’s your budget?</h1>
+          <input type="text" />
+          <a href="./overview.html">
+            <button class="primaryRegular">Set budget</button>
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      document.getElementById("openSettings").addEventListener("click", () => {
+        document.getElementById("settings").style.display = "block";
+      });
+
+      document.getElementById("closeSettings").addEventListener("click", () => {
+        document.getElementById("settings").style.display = "none";
+      });
+    </script>
+  </body>
+</html>

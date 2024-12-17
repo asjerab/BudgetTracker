@@ -25,6 +25,117 @@ body {
   width: 100%;
 }
 
+.loginContainer {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loginWrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.loginButton {
+  display: flex;
+  width: 20.25rem;
+  height: 2.5rem;
+  padding: 0.625rem 2.1875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  background: #222;
+  color: #ffffff;
+  border: none;
+  transition: all 150ms ease-in-out;
+}
+
+.loginButton:active {
+  transform: scale(0.9);
+}
+
+.registrerButton {
+  width: 20.25rem;
+  height: 2.5rem;
+  padding: 0.625rem 2.1875rem;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  color: #222222;
+  border: none;
+  transition: all 150ms ease-in-out;
+}
+
+.registrerButton:active {
+  transform: scale(0.9);
+}
+
+.registrerContainer {
+  width: 100%;
+  height: 100svh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.registrerWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.registrerWrapper h1 {
+  line-height: 10px;
+}
+
+.registrerWrapper input {
+  width: 20.25rem;
+  height: 1.5rem;
+  padding: 10px;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 1px solid #e0e0e0;
+  background: #fff;
+  margin-top: 1.5%;
+  margin-bottom: 1.5%;
+}
+
+.registrerWrapper button {
+  padding: 0.625rem 2.1875rem;
+  background-color: black;
+  border: none;
+  color: #ffffff;
+  border-radius: 4px;
+  margin-top: 2%;
+  transition: all 150ms ease-in-out;
+}
+
+.registrerWrapper:active button {
+  transform: scale(0.9);
+}
+
+.backButtonRegistrer {
+  position: absolute;
+  top: 50px;
+  border: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.backButtonRegistrer:active {
+    transform: scale(0.9);
+}
+
+
 .navWrapper {
   display: flex;
   justify-content: space-between;

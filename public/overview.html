@@ -13,50 +13,36 @@
         <h1 class="primaryRegular" id="WelcomeTitle">Welcome, asjer</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
+          width="49"
+          height="49"
+          viewBox="0 0 49 49"
           fill="none"
-          viewBox="0 0 24 24"
-          stroke-width="1.5"
-          stroke="currentColor"
-          class="size-6 navWrapperSvg"
           id="openSettings"
         >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
+          <circle
+            opacity="0.9"
+            cx="24.5"
+            cy="24.5"
+            r="23.5"
+            fill="#202020"
+            stroke="#724CF9"
+            stroke-width="2"
           />
         </svg>
       </nav>
       <div class="settings" id="settings">
-        <nav class="navWrapper">
-          <h1 class="primaryRegular">Welcome, asjer</h1>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 24 24"
-            stroke-width="1.5"
-            stroke="currentColor"
-            class="size-6 navWrapperSvg"
-          >
-            <path
-              stroke-linecap="round"
-              stroke-linejoin="round"
-              d="M17.982 18.725A7.488 7.488 0 0 0 12 15.75a7.488 7.488 0 0 0-5.982 2.975m11.963 0a9 9 0 1 0-11.963 0m11.963 0A8.966 8.966 0 0 1 12 21a8.966 8.966 0 0 1-5.982-2.275M15 9.75a3 3 0 1 1-6 0 3 3 0 0 1 6 0Z"
-            />
-          </svg>
-        </nav>
         <div class="settingBackButton">
           <button id="closeSettings">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="10"
-              height="18"
-              viewBox="0 0 10 18"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
               fill="none"
             >
               <path
-                d="M8.75 16.5L1.25 9L8.75 1.5"
-                stroke="black"
+                d="M15.75 19.5L8.25 12L15.75 4.5"
+                stroke="white"
                 stroke-width="1.5"
                 stroke-linecap="round"
                 stroke-linejoin="round"
@@ -92,7 +78,17 @@
         <nav class="expenssesNav">
           <p class="primaryRegular">Expensses</p>
         </nav>
-        <div></div>
+        <div class="expenssesContentContainer">
+          <div class="expenssesContentWrapper">
+            <nav class="expenssesContentWrapperNav">
+              <p class="primaryRegular expenssesContentWrapperNavP">Kiwi</p>
+            </nav>
+            <div class="expenssesContentSubWrapper">
+              <p class="primaryRegular expenssesContentSubWrapperGreyed">today</p>
+              <p class="primaryRegular expenssesContentSubWrapperAmount">-60 nok</p>
+            </div>
+          </div>
+        </div>
       </div>
 
       <div class="menuBottom">
@@ -114,8 +110,6 @@
       </div>
     </div>
 
-    <script src="overview.js">
-
-    </script>
+    <script src="overview.js"></script>
   </body>
 </html>

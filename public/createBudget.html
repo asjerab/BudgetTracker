@@ -10,7 +10,7 @@
   <body>
     <div class="container">
       <nav class="navWrapper">
-        <h1 class="primaryRegular">Welcome, asjer</h1>
+        <h1 class="primaryRegular" id="WelcomeTitle">Welcome, asjer</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -30,7 +30,7 @@
 
       <div class="settings" id="settings">
         <nav class="navWrapper">
-          <h1 class="primaryRegular">Welcome, asjer</h1>
+          <h1 class="primaryRegular" id="WelcomeTit">Welcome, asjer</h1>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             fill="none"
@@ -68,8 +68,8 @@
         </div>
 
         <div class="settingsContentWrapper">
-          <a href="./index.html">
-            <button class="primaryRegular">Change budget</button>
+          <a href="./overview.html">
+            <button class="primaryRegular">View budget</button>
           </a>
         </div>
 
@@ -125,24 +125,18 @@
             />
           </svg>
         </nav>
-        <div class="budgetModalContent">
-          <h1 class="primaryRegular">What’s your budget?</h1>
-          <input type="text" />
+        <form class="budgetModalContent">
+          <h1 class="primaryRegular">What’s your budget? (kr)</h1>
+          <input type="number" placeholder="100" id="budget"/>
           <a href="./overview.html">
-            <button class="primaryRegular">Set budget</button>
+            <button type="submit" class="primaryRegular">Set budget</button>
           </a>
-        </div>
+        </form>
       </div>
     </div>
 
-    <script>
-      document.getElementById("openSettings").addEventListener("click", () => {
-        document.getElementById("settings").style.display = "block";
-      });
+    <script src="budget.js">
 
-      document.getElementById("closeSettings").addEventListener("click", () => {
-        document.getElementById("settings").style.display = "none";
-      });
     </script>
   </body>
 </html>

@@ -4,13 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
-    <script src="/script.js" defer></script>
+
     <title>Document</title>
   </head>
   <body>
     <div class="container">
       <nav class="navWrapper">
-        <h1 class="primaryRegular">Welcome, asjer</h1>
+        <h1 class="primaryRegular" id="WelcomeTitle">Welcome, asjer</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
           fill="none"
@@ -67,13 +67,13 @@
         </div>
 
         <div class="settingsContentWrapper">
-          <a href="./index.html">
+          <a href="./createBudget.html">
             <button class="primaryRegular">Change budget</button>
           </a>
         </div>
 
         <div class="settingsLogOutWrapper">
-          <button class="primaryRegular">Log out</button>
+          <button class="primaryRegular" id="logout">Log out</button>
         </div>
       </div>
     </div>
@@ -83,7 +83,7 @@
         <nav class="budgetOverviewNav">
           <p class="primaryRegular">19 days left</p>
           <div class="budgetOverviewSubWrapper">
-            <h1 class="primaryRegular">$100.00</h1>
+            <h1 class="primaryRegular" id="budgetShowcase">$100.00</h1>
             <p class="primaryRegular">Left this month</p>
           </div>
         </nav>
@@ -114,14 +114,8 @@
       </div>
     </div>
 
-    <script>
-      document.getElementById("openSettings").addEventListener("click", () => {
-        document.getElementById("settings").style.display = "block";
-      });
+    <script src="overview.js">
 
-      document.getElementById("closeSettings").addEventListener("click", () => {
-        document.getElementById("settings").style.display = "none";
-      });
     </script>
   </body>
 </html>

@@ -6,12 +6,12 @@ body {
 
 @font-face {
   font-family: "AeonikTRIAL-Regular";
-  src: url(/public/fonts/Gilroy-Regular.ttf);
+  src: url(./fonts/Gilroy-Regular.ttf);
 }
 
 @font-face {
   font-family: "AeonikTRIAL-Light";
-  src: url(/public/fonts/AeonikTRIAL-Light.otf);
+  src: url(./fonts/AeonikTRIAL-Light.otf);
 }
 
 .primaryRegular {

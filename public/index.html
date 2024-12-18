@@ -1,21 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <title>Document</title>
-  </head>
-  <body>
-    <div class="loginContainer">
-      <div class="loginWrapper">
-        <a href="/login">
-          <button class="primaryRegular loginButton">Login</button>
-        </a>
-        <a href="/registrer">
-          <button class="primaryRegular registrerButton">registrer</button>
-        </a>
-      </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <title>Document</title>
+</head>
+
+<body>
+  <div class="loginContainer">
+    <div class="loginWrapper">
+      <a href="/login">
+        <button class="primaryRegular loginButton">Login</button>
+      </a>
+      <a href="/registrer">
+        <button class="primaryRegular registrerButton">registrer</button>
+      </a>
     </div>
-  </body>
+  </div>
+</body>
+<script>
+  if (sessionStorage.getItem("username")) {
+    window.location.assign("../overview.html")
+  }
+</script>
+
 </html>

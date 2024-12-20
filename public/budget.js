@@ -1,14 +1,15 @@
 
-
-document.getElementById("WelcomeTitle").textContent = "Welcome, " + sessionStorage.getItem("username")
-document.getElementById("WelcomeTit").textContent = "Welcome, " + sessionStorage.getItem("username")
-document.getElementById("openSettings").addEventListener("click", () => {
-  document.getElementById("settings").style.display = "block";
+document.getElementById("newBudgetButton").addEventListener("click", () => {
+  document.getElementById("budgetModal").style.display = "block";
 });
 
-document.getElementById("closeSettings").addEventListener("click", () => {
-  document.getElementById("settings").style.display = "none";
+document.getElementById("closeBudgetModal").addEventListener("click", () => {
+  document.getElementById("budgetModal").style.display = "none";
 });
+
+
+
+
 
 document.getElementsByClassName("budgetModalContent")[0].addEventListener("submit", async (e) => {
     e.preventDefault()

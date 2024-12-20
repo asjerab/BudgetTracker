@@ -13,7 +13,7 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
     })
   });
 
-  if (response.ok) {
+
     const userData = await response.json();
     console.log('Logged in user:', userData);
     sessionStorage.setItem("username", userData.username)
@@ -31,10 +31,7 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
     }
     // Now you can use userData.username, userData.id, etc.
     // Store it in localStorage, update UI, redirect, etc.
-  } else {
-    const errorMessage = await response.text();
-    console.error('Login failed:', errorMessage);
-  }
+
 });
 
 

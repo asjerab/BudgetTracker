@@ -65,6 +65,8 @@ app.post('/login', async (req, res) => {
     });
   } catch (err) {
     res.status(500).send('Error during login');
+    console.log(err);
+
   }
 });
 app.post('/setBudget', async (req, res) => {
@@ -84,12 +86,52 @@ app.post('/setBudget', async (req, res) => {
       // Sammenlign passordet direkte
 
 
-      
+
     });
   } catch (err) {
     res.status(500).send('Error during login');
+    console.log(err);
+
   }
 });
+app.post('/saveExpense', async (req, res) => {
+  const { two, one, username } = req.body;
+  console.log(req.body);
+
+  try {
+    const query = 'INSERT INTO expenses (username, expense, amount) VALUES (?, ?, ?)';
+    connection.query(query, [username, one, two,], (error, results) => {
+      if (error) {
+        console.log(error);
+        return res.status(500).send('Error retrieving user data');
+
+      }
+      if (results.length === 0) {
+        return res.status(401).send('User not found');
+      }
+      res.sendStatus(200)
+
+    });
+  } catch (err) {
+    res.status(500).send('Error during login');
+    console.log(err);
+
+  }
+});
+app.post('/get/expenses', async (req, res) => {
+  const { username } = req.body;
+
+  connection.query(`SELECT * FROM expenses WHERE username = '${username}'`, function (err, result, fields) {
+    if (err) {
+      console.error("Error creating user:", err);
+      res.status(500).send(err);
+      return;
+    }
+    res.send(result)
+  });
+
+});
+
 
 
 

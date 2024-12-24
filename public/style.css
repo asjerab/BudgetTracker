@@ -3,24 +3,105 @@ body {
   background-color: #151515;
   overflow-x: hidden;
 }
- 
+
+html {
+  width: 100%;
+  height: 100dvh;
+}
+
 @font-face {
   font-family: "AeonikTRIAL-Regular";
   src: url(./fonts/Gilroy-Regular.ttf);
 }
- 
+
 @font-face {
   font-family: "AeonikTRIAL-Light";
   src: url(./fonts/AeonikTRIAL-Light.otf);
 }
- 
+
 .primaryRegular {
   font-family: "AeonikTRIAL-Regular";
 }
 .primaryLight {
   font-family: "AeonikTRIAL-Light";
 }
- 
+
+.inputs {
+  width: 100%;
+  height: 2.875rem;
+  flex-shrink: 0;
+  border-radius: 0.25rem;
+  border: 2px solid #724cf9;
+  background: #202020;
+  padding: 10px;
+  color: #fff;
+  font-family: "AeonikTRIAL-Regular";
+  font-size: 1.125rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.buttonPurple {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 2.1875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #724cf9;
+  color: #fff;
+  font-family: "AeonikTRIAL-Regular";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
+
+.buttonWhite {
+  display: flex;
+  width: 100%;
+  height: 2.5rem;
+  padding: 0.625rem 2.1875rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  flex-shrink: 0;
+  border-radius: 4px;
+  background: #fff;
+  color: #111;
+  font-family: "AeonikTRIAL-Regular";
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  border: none;
+}
+
+
+
+.title {
+  color: #fff;
+  font-family: "AeonikTRIAL-Regular";
+  font-size: 1.875rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.titleSmall {
+  color: #fff;
+  font-family: "AeonikTRIAL-Regular";
+  font-size: 1.3rem;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
 .container {
   width: 100%;
   display: flex;
@@ -28,13 +109,13 @@ body {
   justify-content: space-between;
   height: 90svh;
 }
- 
+
 .cardHeroCard {
   display: flex;
   justify-content: center;
   align-items: center;
 }
- 
+
 .loginContainer {
   width: 100%;
   height: 100svh;
@@ -42,7 +123,7 @@ body {
   justify-content: center;
   align-items: center;
 }
- 
+
 .loginWrapper {
   display: flex;
   justify-content: center;
@@ -50,7 +131,7 @@ body {
   flex-direction: column;
   gap: 5px;
 }
- 
+
 .loginButton {
   display: flex;
   width: 20.25rem;
@@ -66,11 +147,11 @@ body {
   border: none;
   transition: all 150ms ease-in-out;
 }
- 
+
 .loginButton:active {
   transform: scale(0.9);
 }
- 
+
 .registrerButton {
   width: 20.25rem;
   height: 2.5rem;
@@ -82,11 +163,11 @@ body {
   border: none;
   transition: all 150ms ease-in-out;
 }
- 
+
 .registrerButton:active {
   transform: scale(0.9);
 }
- 
+
 .registrerContainer {
   width: 100%;
   height: 100svh;
@@ -94,17 +175,17 @@ body {
   justify-content: center;
   align-items: center;
 }
- 
+
 .registrerWrapper {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
- 
+
 .registrerWrapper h1 {
   line-height: 10px;
 }
- 
+
 .registrerWrapper input {
   width: 20.25rem;
   height: 1.5rem;
@@ -116,7 +197,7 @@ body {
   margin-top: 1.5%;
   margin-bottom: 1.5%;
 }
- 
+
 .registrerWrapper button {
   padding: 0.625rem 2.1875rem;
   background-color: black;
@@ -126,11 +207,11 @@ body {
   margin-top: 2%;
   transition: all 150ms ease-in-out;
 }
- 
+
 .registrerWrapper:active button {
   transform: scale(0.9);
 }
- 
+
 .backButtonRegistrer {
   position: absolute;
   top: 50px;
@@ -140,18 +221,18 @@ body {
   gap: 5px;
   transition: all 150ms ease-in-out;
 }
- 
+
 .backButtonRegistrer:active {
   transform: scale(0.9);
 }
- 
+
 .navWrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 100%;
 }
- 
+
 .navWrapper {
   color: #fff;
   font-size: 1.075rem;
@@ -159,18 +240,18 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .navWrapperSvg {
   width: 100%;
   max-width: 50px;
 }
- 
+
 .cardHero {
   display: flex;
   justify-content: center;
   align-items: end;
 }
- 
+
 .cardHeroContent {
   display: flex;
   flex-direction: column;
@@ -178,7 +259,7 @@ body {
   align-items: flex-start;
   width: 19.5rem;
 }
- 
+
 .cardHeroContent p {
   text-align: left;
   font-size: 0.75rem;
@@ -187,7 +268,7 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .cardHeroContent button {
   display: flex;
   width: 100%;
@@ -200,11 +281,11 @@ body {
   border: none;
   color: #fff;
 }
- 
+
 .cardHeroContent:active button {
   transform: scale(0.9);
 }
- 
+
 .budgetModal {
   display: none;
   position: absolute;
@@ -215,7 +296,7 @@ body {
   border-radius: 1.75rem 1.75rem 0rem 0rem;
   height: 350px;
 }
- 
+
 .budgetModalContent {
   display: flex;
   justify-content: center;
@@ -223,7 +304,7 @@ body {
   flex-direction: column;
   height: 35dvh;
 }
- 
+
 .budgetModalContent h1 {
   color: #fff;
   text-align: center;
@@ -233,7 +314,7 @@ body {
   line-height: normal;
   line-height: 10px;
 }
- 
+
 .budgetModalContent input {
   border-radius: 0.25rem;
   border: 2px solid #724cf9;
@@ -249,19 +330,19 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .budgelModalNav {
   display: flex;
   justify-content: flex-end;
   padding: 25px;
 }
- 
+
 .budgetModalContent a {
   width: 90%;
   margin-top: 2.5%;
   text-decoration: none;
 }
- 
+
 .budgetModal button {
   display: flex;
   width: 100%;
@@ -277,11 +358,11 @@ body {
   text-decoration: none;
   border: none;
 }
- 
+
 .budgetModal:active button {
   transform: scale(0.9);
 }
- 
+
 .menuBottom {
   display: flex;
   justify-content: center;
@@ -294,7 +375,7 @@ body {
   bottom: 0;
   left: 0;
 }
- 
+
 .menuBottom svg {
   width: 2.5rem;
   height: 2.5rem;
@@ -303,16 +384,16 @@ body {
   background: #724cf9;
   animation: 300ms ease-in-out;
 }
- 
+
 .menuBottom:active svg {
   transform: scale(0.9);
 }
- 
+
 .budgetOverviewWrapper {
   padding-left: 25px;
   padding-right: 25px;
 }
- 
+
 .budgetOverviewNav p {
   color: #909090;
   font-size: 1.0625rem;
@@ -322,7 +403,7 @@ body {
   line-height: 0;
   margin: 0;
 }
- 
+
 .budgetOverviewSubWrapper {
   display: flex;
   justify-content: space-between;
@@ -331,7 +412,7 @@ body {
   padding: 0;
   margin: 0;
 }
- 
+
 .budgetOverviewSubWrapper h1 {
   color: #724cf9;
   -webkit-text-stroke-width: 2´1;
@@ -342,7 +423,7 @@ body {
   line-height: normal;
   line-height: 0;
 }
- 
+
 .budgetOverviewSubWrapper p {
   color: #909090;
   font-size: 1.0625rem;
@@ -351,13 +432,13 @@ body {
   line-height: normal;
   line-height: 0;
 }
- 
+
 .expenssesWrapper {
   position: absolute;
   bottom: 0;
   left: 0;
 }
- 
+
 .expenssesContainer {
   width: 24.5625rem;
   height: 25rem;
@@ -367,7 +448,7 @@ body {
   background: #222;
   padding: 25px;
 }
- 
+
 .expenssesContainer p {
   color: #fff;
   font-size: 0.9375rem;
@@ -375,7 +456,7 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .settings {
   display: none;
   padding: 20px;
@@ -389,7 +470,7 @@ body {
   overflow: hidden;
   box-sizing: border-box;
 }
- 
+
 .settingBackButton button {
   display: flex;
   align-items: center;
@@ -403,20 +484,20 @@ body {
   line-height: normal;
   animation: 300ms ease-in-out;
 }
- 
+
 .settingBackButton :active {
   transform: scale(0.9);
 }
- 
+
 .settingsContentWrapper {
   margin-top: 2.5%;
 }
- 
+
 .settingsContentWrapper a {
   text-decoration: none;
   margin-top: 5%;
 }
- 
+
 .settingsContentWrapper button {
   width: 100%;
   height: 2.5rem;
@@ -436,11 +517,11 @@ body {
   align-items: center;
   margin-top: 3%;
 }
- 
+
 .settingsContentWrapper:active button {
   transform: scale(0.9);
 }
- 
+
 .settingsLogOutWrapper button {
   width: 100%;
   height: 2.5rem;
@@ -459,11 +540,11 @@ body {
   justify-content: center;
   align-items: center;
 }
- 
+
 .settingsLogOutWrapper:active button {
   transform: scale(0.9);
 }
- 
+
 .settingsLogOutWrapper {
   width: 85%;
   position: absolute;
@@ -471,14 +552,14 @@ body {
   left: 50%;
   transform: translate(-50%, -50%);
 }
- 
+
 .createBudgetNav {
   display: flex;
   align-items: center;
   width: 75%;
   justify-content: space-between;
 }
- 
+
 .createBudgetNav h1 {
   color: #fff;
   font-size: 1.375rem;
@@ -486,13 +567,13 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .expenssesContentWrapper {
   display: flex;
   flex-direction: column;
   align-items: start;
 }
- 
+
 .expenssesContentSubWrapper {
   width: 100%;
   display: flex;
@@ -501,7 +582,7 @@ body {
   margin: 0;
   height: auto;
 }
- 
+
 .expenssesContentSubWrapperGreyed {
   color: #a3a3a3;
   font-size: 0.9375rem;
@@ -511,7 +592,7 @@ body {
   line-height: 0;
   height: auto;
 }
- 
+
 .expenssesContentSubWrapperAmount {
   line-height: 0;
   color: #fff;
@@ -521,7 +602,7 @@ body {
   line-height: normal;
   height: auto;
 }
- 
+
 .expenssesContentWrapperNavP {
   color: #fff;
   line-height: 0;
@@ -531,22 +612,22 @@ body {
   line-height: normal;
   height: auto;
 }
- 
+
 .expenssesContentWrapperNav {
   margin: 0;
   height: auto;
   padding: 0;
 }
- 
+
 .NewExpenssesContainer {
   display: none;
 }
- 
+
 .NewExpenssesSvg {
   display: flex;
   justify-content: flex-end;
 }
- 
+
 .NewExpenssesNav {
   color: #fff;
   font-size: 0.9375rem;
@@ -554,7 +635,7 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .NewExpenssesInputWrapper input {
   width: 95vw;
   height: 36px;
@@ -571,7 +652,7 @@ body {
   line-height: normal;
   padding: 5px;
 }
- 
+
 .NewExpenssesInputWrapper button {
   display: flex;
   width: 99vw;
@@ -590,7 +671,7 @@ body {
   font-weight: 500;
   line-height: normal;
 }
- 
+
 .budgetOverviewPageWrapper {
   width: 78vw;
   height: 50px;
@@ -603,25 +684,25 @@ body {
   align-items: center;
   margin-top: 10%;
 }
- 
+
 .budgetOverviewPageNav {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
 }
- 
+
 .budgetOverviewPageYear {
   color: #fff;
   font-size: 10px;
   line-height: 0;
 }
- 
+
 .budgetOverviewPageMonth {
   color: #fff;
   font-size: 15px;
   line-height: 0;
 }
- 
+
 .budgetOverviewPageAmount {
   color: #fff;
   font-size: 15px;
@@ -637,4 +718,3 @@ body {
   border-radius: 100px;
   background: #724cf9;
 }
- 

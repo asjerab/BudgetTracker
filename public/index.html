@@ -1,29 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Document</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="/style.css" />
-  <title>Document</title>
-</head>
-
-<body>
-  <div class="loginContainer">
-    <div class="loginWrapper">
-      <a href="/login">
-        <button class="primaryRegular loginButton">Login</button>
-      </a>
-      <a href="/registrer">
-        <button class="primaryRegular registrerButton">registrer</button>
-      </a>
+  <body>
+    <div class="flex justify-center items-center h-dvh">
+      <div class="w-full max-w-[300px]">
+        <a href="/login">
+          <button class="primaryRegular buttonPurple mb-2">Login</button>
+        </a>
+        <a href="/registrer">
+          <button class="primaryRegular buttonWhite mt-2">registrer</button>
+        </a>
+      </div>
     </div>
-  </div>
-</body>
-<script>
-  if (sessionStorage.getItem("username")) {
-    window.location.assign("../overview.html")
-  }
-</script>
-
+  </body>
+  <script>
+    if (sessionStorage.getItem("username")) {
+      window.location.assign("../overview.html");
+    }
+  </script>
 </html>

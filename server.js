@@ -76,22 +76,14 @@ app.post('/setBudget', async (req, res) => {
     const query = 'UPDATE users SET budget = ? WHERE username = ?';
     connection.query(query, [amount, username], (error, results) => {
       if (error) {
-        return res.status(500).send('Error retrieving user data');
+        return res.status(500).send('Error updating budget');
       }
-      if (results.length === 0) {
-        return res.status(401).send('User not found');
-      }
-
-
-      // Sammenlign passordet direkte
-
-
-
+      // Send suksess-respons
+      res.status(200).json({ message: 'Budget updated successfully' });
     });
   } catch (err) {
-    res.status(500).send('Error during login');
+    res.status(500).send('Error updating budget');
     console.log(err);
-
   }
 });
 app.post('/saveExpense', async (req, res) => {

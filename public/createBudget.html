@@ -73,28 +73,30 @@
     </div>
     <div
       id="budgetModal"
-      class="hidden flex justify-center gap-[10px] items-center p-5 bg-[#222] h-auto absolute bottom-0 left-0 w-full rounded-t-[12px]"
+      class="hidden flex justify-center gap-[10px] items-center p-5 bg-[#222] h-auto absolute bottom-0 left-0 w-full rounded-t-[16px]"
     >
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="30"
-        height="30"
-        viewBox="0 0 30 30"
-        fill="none"
-        class="flex items-end"
-        id="closeBudgetModal"
-      >
-        <g opacity="0.9">
-          <path
-            d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
-            stroke="white"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </g>
-      </svg>
-      <form>
+      <div class="flex justify-end py-2">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="30"
+          height="30"
+          viewBox="0 0 30 30"
+          fill="none"
+          class="flex"
+          id="closeBudgetModal"
+        >
+          <g opacity="0.9">
+            <path
+              d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
+              stroke="white"
+              stroke-width="1.5"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            />
+          </g>
+        </svg>
+      </div>
+      <form class="flex flex-col gap-[15px]">
         <h1 class="title">What’s your budget?</h1>
         <input
           type="number"
@@ -103,9 +105,7 @@
           class="primaryRegular inputs"
         />
         <a href="./overview.html">
-          <button type="submit" class="primaryRegular buttonPurple">
-            Set budget
-          </button>
+          <button type="submit" class="primaryRegular buttonPurple" id="setBudgetBtn">Set budget</button>
         </a>
       </form>
     </div>

@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="/style.css" />
- 
-    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>My bugdets</title>
   </head>
   <body>
     <div>
-      <nav class="createBudgetNav">
+      <nav class="px-5 py-10 flex justify-between items-center">
         <a href="overview.html">
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -39,16 +39,16 @@
             </defs>
           </svg>
         </a>
-        <h1 class="primaryRegular">My budgets</h1>
+        <h1 class="titleSmall">My budgets</h1>
       </nav>
     </div>
-    <div class="budgetOverviewContainer">
-      <div class="budgetOverviewPageWrapper">
-        <nav class="budgetOverviewPageNav">
-          <p class="primaryRegular budgetOverviewPageYear">2024</p>
-          <p class="primaryRegular budgetOverviewPageMonth">December</p>
+    <div class="px-5">
+      <div class="flex justify-between items-center bg-[#222] px-5 py-7 rounded-[8px] active:scale-[0.9] duration-150 ease-in-out cursor-pointer">
+        <nav class="">
+          <p class="titleSmall">2024</p>
+          <p class="greyedText">December</p>
         </nav>
-        <h1 class="primaryRegular budgetOverviewPageAmount">1000 NOK</h1>
+        <h1 class="badges">1000 NOK</h1>
       </div>
     </div>
  

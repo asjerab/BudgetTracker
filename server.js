@@ -94,7 +94,7 @@ app.post('/saveExpense', async (req, res) => {
   console.log(dateString);
   
   try {
-    const query = 'INSERT INTO expenses (username, expense, amount, date) VALUES (?, ?, ?, ?)';
+    const query = 'INSERT INTO BudgetTracker.expenses (username, expense, amount, date) VALUES (?, ?, ?, ?)';
     connection.query(query, [username, one, two, dateString], (error, results) => {
       if (error) {
         console.log(error);

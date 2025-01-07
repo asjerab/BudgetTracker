@@ -71,19 +71,22 @@ app.post('/login', async (req, res) => {
 });
 app.post('/setBudget', async (req, res) => {
   const { username, amount } = req.body;
+  console.log(req.body);
+  
 
   try {
     const query = 'UPDATE BudgetTracker.users SET budget = ? WHERE username = ?';
     connection.query(query, [amount, username], (error, results) => {
       if (error) {
+        console.log(error)
         return res.status(500).send('Error updating budget');
       }
       // Send suksess-respons
       res.status(200).json({ message: 'Budget updated successfully' });
     });
   } catch (err) {
-    res.status(500).send('Error updating budget');
     console.log(err);
+    res.status(500).send('Error updating budget');
   }
 });
 app.post('/saveExpense', async (req, res) => {

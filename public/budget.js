@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const amount = amountInput.value;
-    const username = localStorage.getItem('username');
+    const username = sessionStorage.getItem('username');
 
     try {
       const response = await fetch('/setBudget', {
@@ -30,11 +30,16 @@ document.addEventListener("DOMContentLoaded", () => {
         },
         body: JSON.stringify({ username, amount }),
       });
+      let res = await response.json()
 
-      if (response.ok) {
+
+      if (res.message) {
+        console.log(res.message);
+        sessionStorage.setItem("budget", amount)
         window.location.href = './overview.html';
+        
       } else {
-        console.error('Failed to set budget');
+        console.error(res);
       }
     } catch (error) {
       console.error('Error:', error);

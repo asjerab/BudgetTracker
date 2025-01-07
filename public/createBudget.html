@@ -1,114 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/style.css" />
-    <script src="https://cdn.tailwindcss.com"></script>
-    <title>Create a budget</title>
-  </head>
-  <body>
-    <div class="w-full h-[100dvh] flex flex-col justify-between">
-      <nav class="flex justify-between py-6 px-4">
-        <a href="./overview.html">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="27"
-            height="24"
-            viewBox="0 0 27 24"
-            fill="none"
-          >
-            <g clip-path="url(#clip0_23_3)">
-              <path
-                d="M11.8125 19.5L3.375 12M3.375 12L11.8125 4.5M3.375 12L23.625 12"
-                stroke="white"
-                stroke-width="1.5"
-                stroke-linecap="round"
-                stroke-linejoin="round"
-              />
-            </g>
-            <defs>
-              <clipPath id="clip0_23_3">
-                <rect
-                  width="24"
-                  height="27"
-                  fill="white"
-                  transform="translate(0 24) rotate(-90)"
-                />
-              </clipPath>
-            </defs>
-          </svg>
-        </a>
-        <h1 class="titleSmall">Create a budget</h1>
-      </nav>
-      <div class="flex justify-center">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="124"
-          height="124"
-          viewBox="0 0 124 124"
-          fill="none"
-        >
-          <path
-            d="M11.625 42.625H112.375M11.625 46.5H112.375M27.125 73.625H58.125M27.125 85.25H42.625M23.25 100.75H100.75C103.833 100.75 106.79 99.5252 108.97 97.3451C111.15 95.165 112.375 92.2081 112.375 89.125V34.875C112.375 31.7919 111.15 28.835 108.97 26.6549C106.79 24.4748 103.833 23.25 100.75 23.25H23.25C20.1669 23.25 17.21 24.4748 15.0299 26.6549C12.8498 28.835 11.625 31.7919 11.625 34.875V89.125C11.625 92.2081 12.8498 95.165 15.0299 97.3451C17.21 99.5252 20.1669 100.75 23.25 100.75Z"
-            stroke="#724CF9"
-            stroke-width="5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          />
-        </svg>
-      </div>
-      <div class="p-5">
-        <p
-          class="primaryRegular text-slate-50 w-full max-w-[30.5rem] my-4 text-[0.987rem]"
-        >
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
-          cursus mattis arcu eget pellentesque. Pellentesque eu ultrices odio,
-          molestie ullamcorper risus.
-        </p>
-        <button class="buttonPurple mb-2" id="newBudgetButton">
-          Create budget
-        </button>
-      </div>
-    </div>
-    <div
-      id="budgetModal"
-      class="hidden flex justify-center gap-[10px] items-center p-5 bg-[#222] h-auto absolute bottom-0 left-0 w-full rounded-t-[16px]"
-    >
-      <div class="flex justify-end py-2">
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="30"
-          height="30"
-          viewBox="0 0 30 30"
-          fill="none"
-          class="flex"
-          id="closeBudgetModal"
-        >
-          <g opacity="0.9">
-            <path
-              d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5"
-              stroke="white"
-              stroke-width="1.5"
-              stroke-linecap="round"
-              stroke-linejoin="round"
-            />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>Create a budget</title>
+</head>
+
+<body>
+  <div class="w-full h-[100dvh] flex flex-col justify-between">
+    <nav class="flex justify-between py-6 px-4">
+      <a href="./overview.html">
+        <svg xmlns="http://www.w3.org/2000/svg" width="27" height="24" viewBox="0 0 27 24" fill="none">
+          <g clip-path="url(#clip0_23_3)">
+            <path d="M11.8125 19.5L3.375 12M3.375 12L11.8125 4.5M3.375 12L23.625 12" stroke="white" stroke-width="1.5"
+              stroke-linecap="round" stroke-linejoin="round" />
           </g>
+          <defs>
+            <clipPath id="clip0_23_3">
+              <rect width="24" height="27" fill="white" transform="translate(0 24) rotate(-90)" />
+            </clipPath>
+          </defs>
         </svg>
-      </div>
-      <form class="flex flex-col gap-[15px]">
-        <h1 class="title">What’s your budget?</h1>
-        <input
-          type="number"
-          placeholder="Example: 1000 (kr)"
-          id="budget"
-          class="primaryRegular inputs"
-        />
-        <a href="./overview.html">
-          <button type="submit" class="primaryRegular buttonPurple" id="setBudgetBtn">Set budget</button>
-        </a>
-      </form>
+      </a>
+      <h1 class="titleSmall">Create a budget</h1>
+    </nav>
+    <div class="flex justify-center">
+      <svg xmlns="http://www.w3.org/2000/svg" width="124" height="124" viewBox="0 0 124 124" fill="none">
+        <path
+          d="M11.625 42.625H112.375M11.625 46.5H112.375M27.125 73.625H58.125M27.125 85.25H42.625M23.25 100.75H100.75C103.833 100.75 106.79 99.5252 108.97 97.3451C111.15 95.165 112.375 92.2081 112.375 89.125V34.875C112.375 31.7919 111.15 28.835 108.97 26.6549C106.79 24.4748 103.833 23.25 100.75 23.25H23.25C20.1669 23.25 17.21 24.4748 15.0299 26.6549C12.8498 28.835 11.625 31.7919 11.625 34.875V89.125C11.625 92.2081 12.8498 95.165 15.0299 97.3451C17.21 99.5252 20.1669 100.75 23.25 100.75Z"
+          stroke="#724CF9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
     </div>
-    <script src="budget.js"></script>
-  </body>
+    <div class="p-5">
+      <p class="primaryRegular text-slate-50 w-full max-w-[30.5rem] my-4 text-[0.987rem]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas
+        cursus mattis arcu eget pellentesque. Pellentesque eu ultrices odio,
+        molestie ullamcorper risus.
+      </p>
+      <button class="buttonPurple mb-2" id="newBudgetButton">
+        Create budget
+      </button>
+    </div>
+  </div>
+  <div id="budgetModal"
+    class="hidden flex justify-center gap-[10px] items-center p-5 bg-[#222] h-auto absolute bottom-0 left-0 w-full rounded-t-[16px]">
+    <div class="flex justify-end py-2">
+      <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="none" class="flex"
+        id="closeBudgetModal">
+        <g opacity="0.9">
+          <path d="M7.5 22.5L22.5 7.5M7.5 7.5L22.5 22.5" stroke="white" stroke-width="1.5" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </g>
+      </svg>
+    </div>
+    <form class="flex flex-col gap-[15px]">
+      <h1 class="title">What’s your budget?</h1>
+      <input type="number" placeholder="Example: 1000 (kr)" id="budget" class="primaryRegular inputs" />
+
+      <button type="submit" class="primaryRegular buttonPurple" id="setBudgetBtn">Set budget</button>
+
+    </form>
+  </div>
+  <script src="budget.js"></script>
+</body>
+
 </html>

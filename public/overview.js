@@ -50,7 +50,7 @@ document.getElementById("niggaTivities").addEventListener("click", async () => {
   let answer = response.json()
   console.log(answer);
 
-  document.getElementById("NewExpenssesContainerDada").style.display = "none";
+  document.getElementById("NewExpenssesContainer").style.display = "none";
   document.getElementById("expenssesContentWrapperDada").style.display = "block";
   loadExpenses()
 })

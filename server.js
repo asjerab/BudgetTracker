@@ -89,10 +89,13 @@ app.post('/setBudget', async (req, res) => {
 app.post('/saveExpense', async (req, res) => {
   const { two, one, username } = req.body;
   console.log(req.body);
-
+  let date = new Date()
+  let dateString = `${date.getDate()}.${date.getMonth() + 1}.${date.getFullYear()}`
+  console.log(dateString);
+  
   try {
-    const query = 'INSERT INTO expenses (username, expense, amount) VALUES (?, ?, ?)';
-    connection.query(query, [username, one, two,], (error, results) => {
+    const query = 'INSERT INTO expenses (username, expense, amount, date) VALUES (?, ?, ?, ?)';
+    connection.query(query, [username, one, two, dateString], (error, results) => {
       if (error) {
         console.log(error);
         return res.status(500).send('Error retrieving user data');
@@ -112,8 +115,21 @@ app.post('/saveExpense', async (req, res) => {
 });
 app.post('/get/expenses', async (req, res) => {
   const { username } = req.body;
+  let date = new Date()
+  let monthString = `${date.getMonth() + 1}.${date.getFullYear()}`
+  connection.query(`SELECT * FROM expenses WHERE username = '${username}' AND date LIKE '%${monthString}%'`, function (err, result, fields) {
+    if (err) {
+      console.error("Error creating user:", err);
+      res.status(500).send(err);
+      return;
+    }
+    res.send(result)
+  });
 
-  connection.query(`SELECT * FROM expenses WHERE username = '${username}'`, function (err, result, fields) {
+});
+app.post('/get/months', async (req, res) => {
+  const { username } = req.body;
+  connection.query(`SELECT DISTINCT DATE_FORMAT(STR_TO_DATE(date, '%d.%m.%Y'), '%m.%Y') AS month_year FROM expenses WHERE username = '${username}' AND date IS NOT NULL;`, function (err, result, fields) {
     if (err) {
       console.error("Error creating user:", err);
       res.status(500).send(err);

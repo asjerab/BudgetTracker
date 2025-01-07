@@ -1,3 +1,6 @@
+if (!sessionStorage.getItem("username")) {
+  window.location.assign("./index.html")
+}
 document.addEventListener("DOMContentLoaded", () => {
   document.getElementById("newBudgetButton").addEventListener("click", () => {
     document.getElementById("budgetModal").style.display = "block";

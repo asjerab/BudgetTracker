@@ -1,8 +1,14 @@
 if (!sessionStorage.getItem("username") || !sessionStorage.getItem("budget")) {
-  window.location.assign("/createBudget")
+  window.location.assign("./createBudget.html")
 }
+
+//Setting basic styling
 document.getElementById("WelcomeTitle").textContent = "Welcome, " + sessionStorage.getItem("username")
-document.getElementById("budgetShowcase").textContent = sessionStorage.getItem("budget") + "kr"
+const today = new Date();
+const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
+const remainingDays = (lastDayOfMonth - today) / (1000 * 60 * 60 * 24);
+document.getElementById("daysLeft").innerText = Math.ceil(remainingDays) + ' days left'
+
 
 document.getElementById("logout").addEventListener("click", () => {
   sessionStorage.clear()
@@ -15,6 +21,7 @@ document.getElementById("openSettings").addEventListener("click", () => {
 document.getElementById("closeSettings").addEventListener("click", () => {
   document.getElementById("settings").style.display = "none";
 });
+
 document.getElementById("openNewExpenssesButton").style.display = "block";
 
 document.getElementById("openNewExpenssesButton").addEventListener("click", () => {
@@ -26,6 +33,7 @@ document.getElementById("openNewExpenssesButton").addEventListener("click", () =
 document.getElementById("CloseNewExpenssesButton").addEventListener("click", () => {
   document.getElementById("NewExpenssesContainer").style.display = "none";
   document.getElementById("expenssesContentWrapperDada").style.display = "block";
+  document.getElementById("openNewExpenssesButton").style.display = "block";
   checkNewExpensesContainer();
 });
 
@@ -61,7 +69,7 @@ const loadExpenses = async () => {
     console.error("Element with class 'expenssesContentWrapperDada' not found.");
     return;
   }
-  
+
   expensesWrapper.innerHTML = "";
   let reponse = await fetch("/get/expenses", {
     method: "POST",
@@ -72,6 +80,7 @@ const loadExpenses = async () => {
   });
   let data = await reponse.json();
   console.log(data[0]);
+  let budget = sessionStorage.getItem("budget")
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
 
@@ -83,7 +92,7 @@ const loadExpenses = async () => {
     div.setAttribute("class", "expenssesContentSubWrapper");
     title.setAttribute("class", "primaryRegular expenssesContentSubWrapperGreyed");
     amount.setAttribute("class", "primaryRegular expenssesContentSubWrapperAmount");
-    
+
     expensesChildrenWrapper.setAttribute("class", "primaryRegular expensesChildrenWrapper");
     expensesChildrenWrapper.style.display = "flex";
     expensesChildrenWrapper.style.justifyContent = "space-between";
@@ -92,13 +101,15 @@ const loadExpenses = async () => {
 
     title.textContent = element.expense;
     amount.textContent = `- ${element.amount}kr`;
-    
+
     expensesChildrenWrapper.appendChild(title);
     expensesChildrenWrapper.appendChild(amount);
-    
+
     div.appendChild(expensesChildrenWrapper);
     expensesWrapper.appendChild(div);
+    budget -= element.amount
   }
+  document.getElementById("budgetShowcase").textContent = budget + "kr"
 }
 
 const checkNewExpensesContainer = () => {

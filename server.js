@@ -46,7 +46,7 @@ app.post('/login', async (req, res) => {
   const { username, password } = req.body;
 
   try {
-    const query = 'SELECT * FROM users WHERE username = ?';
+    const query = 'SELECT * FROM BudgetTracker.users WHERE username = ?';
     connection.query(query, [username], (error, results) => {
       if (error) {
         return res.status(500).send('Error retrieving user data');
@@ -73,7 +73,7 @@ app.post('/setBudget', async (req, res) => {
   const { username, amount } = req.body;
 
   try {
-    const query = 'UPDATE users SET budget = ? WHERE username = ?';
+    const query = 'UPDATE BudgetTracker.users SET budget = ? WHERE username = ?';
     connection.query(query, [amount, username], (error, results) => {
       if (error) {
         return res.status(500).send('Error updating budget');
@@ -117,7 +117,7 @@ app.post('/get/expenses', async (req, res) => {
   const { username } = req.body;
   let date = new Date()
   let monthString = `${date.getMonth() + 1}.${date.getFullYear()}`
-  connection.query(`SELECT * FROM expenses WHERE username = '${username}' AND date LIKE '%${monthString}%'`, function (err, result, fields) {
+  connection.query(`SELECT * FROM BudgetTracker.expenses WHERE username = '${username}' AND date LIKE '%${monthString}%'`, function (err, result, fields) {
     if (err) {
       console.error("Error creating user:", err);
       res.status(500).send(err);
@@ -129,7 +129,7 @@ app.post('/get/expenses', async (req, res) => {
 });
 app.post('/get/months', async (req, res) => {
   const { username } = req.body;
-  connection.query(`SELECT DISTINCT DATE_FORMAT(STR_TO_DATE(date, '%d.%m.%Y'), '%m.%Y') AS month_year FROM expenses WHERE username = '${username}' AND date IS NOT NULL;`, function (err, result, fields) {
+  connection.query(`SELECT DISTINCT DATE_FORMAT(STR_TO_DATE(date, '%d.%m.%Y'), '%m.%Y') AS month_year FROM BudgetTracker.expenses WHERE username = '${username}' AND date IS NOT NULL;`, function (err, result, fields) {
     if (err) {
       console.error("Error creating user:", err);
       res.status(500).send(err);

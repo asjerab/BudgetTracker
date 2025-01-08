@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,33 +7,37 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <title>Registrer</title>
   </head>
-  <body">
-  <a href="/">
-    <button class="backButtonRegistrer">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width="24"
-        height="24"
-        viewBox="0 0 24 24"
-        fill="none"
-      >
-        <path
-          d="M15.75 19.5L8.25 12L15.75 4.5"
-          stroke="white"
-          stroke-width="1.5"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-        />
-      </svg>
-      <p class="primaryRegular text-slate-50">Back</p>
-    </button>
-  </a>
+  <body>
+    <a href="/">
+      <button class="backButtonRegistrer">
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="24"
+          height="24"
+          viewBox="0 0 24 24"
+          fill="none"
+        >
+          <path
+            d="M15.75 19.5L8.25 12L15.75 4.5"
+            stroke="white"
+            stroke-width="1.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          />
+        </svg>
+        <p class="primaryRegular text-slate-50">Back</p>
+      </button>
+    </a>
     <div class="w-full h-dvh">
       <div
         class="flex justify-center flex-col items-center justify-center h-dvh"
       >
-      <form id="registrerForm" action="/registrer" method="POST"  class="w-full max-w-[300px] flex flex-col justify-start gap-2"
-      >
+        <form
+          id="registrerForm"
+          action="/registrer"
+          method="POST"
+          class="w-full max-w-[300px] flex flex-col justify-start gap-2"
+        >
           <h1 class="title">Registrer ny bruker</h1>
 
           <input

@@ -23,7 +23,7 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
 
     if (userData.budget != null && userData.budget != "NULL") {
 
-      window.location.assign("../overview.html")
+      window.location.assign(".././overview.html")
 
     } else {
       window.location.assign("../createBudget.html")

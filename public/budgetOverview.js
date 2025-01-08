@@ -19,7 +19,7 @@ const loadMonths = async () => {
         let parts = element.month_year.split('.');
         console.log(getMonthName(parts[0]) + " " + parts[1]);
         let div = document.createElement("div")
-        div.setAttribute("class", "flex justify-between items-center bg-[#222] px-5 py-7 rounded-[8px] active:scale-[0.9] duration-150 ease-in-out cursor-pointer")
+        div.setAttribute("class", "flex justify-between items-center bg-[#222] px-5 py-7 gap-3 rounded-[8px]")
         div.innerHTML = `
         <nav class="">
           <p class="titleSmall">${parts[1]}</p>

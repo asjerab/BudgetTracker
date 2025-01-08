@@ -1,5 +1,5 @@
 body {
-  background-color: #151515;
+  background-color: #151515  ;
   overflow-x: hidden;
 }
 
@@ -27,6 +27,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
 .primaryRegular {
   font-family: "AeonikTRIAL-Regular";
+  font-weight: 800;
 }
 .primaryLight {
   font-family: "AeonikTRIAL-Light";
@@ -92,7 +93,7 @@ input[type="number"]::-webkit-outer-spin-button {
   display: flex;
   width: 100%;
   height: 2.5rem;
-  padding: 0.625rem 2.1875rem;
+  padding: 0.525rem 1.0875rem;
   justify-content: flex-start;
   align-items: center;
   gap: 0.625rem;
@@ -664,6 +665,7 @@ input[type="number"]::-webkit-outer-spin-button {
   max-height: 400px;
   min-height: 85px;
   overflow-y: auto;
+  min-height: 200px;
 }
 
 .expenssesContentWrapperNavP {

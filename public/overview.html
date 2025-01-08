@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -9,7 +9,7 @@
   </head>
   <body>
     <div
-      class="absolute top-0 left-0 w-full h-dvh bg-[#151515] p-5 hidden"
+      class="absolute z-50 top-0 left-0 w-full h-dvh bg-[#151515] p-5 hidden"
       id="settings"
     >
       <div class="my-5">
@@ -35,13 +35,13 @@
 
       <div class="flex flex-col justify-between h-[75dvh]">
         <div class="flex flex-col gap-2 my-5">
-          <a href="./createBudget.html">
+          <div>
             <button
               class="buttonSecondary active:scale-[0.9] duration-150 ease-in-out"
             >
               Change budget
             </button>
-          </a>
+          </div>
           <a href="./budgetOveriew.html">
             <button
               class="buttonSecondary active:scale-[0.9] duration-150 ease-in-out"
@@ -67,28 +67,24 @@
         <h1 class="title" id="WelcomeTitle">Welcome, asjer</h1>
         <svg
           xmlns="http://www.w3.org/2000/svg"
-          width="49"
-          height="49"
-          viewBox="0 0 49 49"
           fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+          class="size-10 text-slate-50"
           id="openSettings"
-          class="cursor-pointer"
         >
-          <circle
-            opacity="0.9"
-            cx="24.5"
-            cy="24.5"
-            r="23.5"
-            fill="#202020"
-            stroke="#724CF9"
-            stroke-width="2"
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"
           />
         </svg>
       </nav>
 
       <div class="">
         <div class="">
-          <nav class="m-5">
+          <nav class="m-3">
             <p class="greyedText" id="daysLeft">19 days left</p>
             <div class="flex justify-between items-center">
               <h1 class="purpleText" id="budgetShowcase">$100.00</h1>
@@ -132,7 +128,7 @@
                 />
               </svg>
             </div>
-            <nav class="primaryRegular ">
+            <nav class="primaryRegular">
               <h1 class="title">Track your expensses</h1>
             </nav>
             <div class="flex flex-col gap-5 my-5">
@@ -148,21 +144,23 @@
                 type="number"
                 placeholder="How much did you spend?"
               />
-              <button id="niggaTivities" class="buttonPurple">Add expensses</button>
+              <button id="niggaTivities" class="buttonPurple">
+                Add expensses
+              </button>
             </div>
           </div>
-          <div class="absolute bottom-0 left-1/2 transform -translate-x-1/2 pb-5">
+          <div class="absolute bottom-0 right-0 p-5">
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="40"
-              height="40"
-              viewBox="0 0 40 40"
+              width="34"
+              height="34"
+              viewBox="0 0 34 34"
               fill="none"
               id="openNewExpenssesButton"
-              class="bg-[#724CF9] p-1 rounded-full cursor-pointer active:scale-[0.9] duration-150 ease-in-out"
+              class="bg-[#724CF9] p-3 rounded-full cursor-pointer active:scale-[0.9] duration-150 ease-in-out w-[50px] h-[50px]"
             >
               <path
-                d="M20 7.5V32.5M32.5 20H7.5"
+                d="M17 1.375V32.625M32.625 17H1.375"
                 stroke="white"
                 stroke-width="1.5"
                 stroke-linecap="round"

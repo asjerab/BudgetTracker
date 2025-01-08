@@ -1,4 +1,4 @@
-if (!sessionStorage.getItem("username")) {
+if (!localStorage.getItem("username")) {
   window.location.assign("./index.html")
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const amount = amountInput.value;
-    const username = sessionStorage.getItem('username');
+    const username = localStorage.getItem('username');
 
     try {
       const response = await fetch('/setBudget', {
@@ -35,7 +35,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       if (res.message) {
         console.log(res.message);
-        sessionStorage.setItem("budget", amount)
+        localStorage.setItem("budget", amount)
         window.location.href = './overview.html';
         
       } else {

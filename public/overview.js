@@ -1,9 +1,9 @@
-if (!sessionStorage.getItem("username") || !sessionStorage.getItem("budget")) {
+if (!localStorage.getItem("username") || !localStorage.getItem("budget")) {
   window.location.assign("./createBudget.html")
 }
 
 //Setting basic styling
-document.getElementById("WelcomeTitle").textContent = "Welcome, " + sessionStorage.getItem("username")
+document.getElementById("WelcomeTitle").textContent = "Welcome, " + localStorage.getItem("username")
 const today = new Date();
 const lastDayOfMonth = new Date(today.getFullYear(), today.getMonth() + 1, 0);
 const remainingDays = (lastDayOfMonth - today) / (1000 * 60 * 60 * 24);
@@ -11,7 +11,7 @@ document.getElementById("daysLeft").innerText = Math.ceil(remainingDays) + ' day
 
 
 document.getElementById("logout").addEventListener("click", () => {
-  sessionStorage.clear()
+  localStorage.clear()
   window.location.assign("../login")
 });
 document.getElementById("openSettings").addEventListener("click", () => {
@@ -52,7 +52,7 @@ document.getElementById("niggaTivities").addEventListener("click", async () => {
     body: JSON.stringify({
       two: Nigga.value,
       one: Nigger.value,
-      username: sessionStorage.getItem("username")
+      username: localStorage.getItem("username")
     })
   })
   let answer = response.json()
@@ -76,11 +76,11 @@ const loadExpenses = async () => {
     headers: {
       'Content-Type': 'application/json'
     },
-    body: JSON.stringify({ username: sessionStorage.getItem("username") })
+    body: JSON.stringify({ username: localStorage.getItem("username") })
   });
   let data = await reponse.json();
   console.log(data[0]);
-  let budget = sessionStorage.getItem("budget")
+  let budget = localStorage.getItem("budget")
   for (let i = 0; i < data.length; i++) {
     const element = data[i];
 

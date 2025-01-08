@@ -16,8 +16,8 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
 
     const userData = await response.json();
     console.log('Logged in user:', userData);
-    sessionStorage.setItem("username", userData.username)
-    sessionStorage.setItem("budget", userData.budget)
+    localStorage.setItem("username", userData.username)
+    localStorage.setItem("budget", userData.budget)
 
 
 

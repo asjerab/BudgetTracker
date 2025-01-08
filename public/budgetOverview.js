@@ -11,7 +11,7 @@ const loadMonths = async () => {
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ username: sessionStorage.getItem("username") })
+        body: JSON.stringify({ username: localStorage.getItem("username") })
     });
     let months = await reponse.json()
     for (let i = 0; i < months.length; i++) {

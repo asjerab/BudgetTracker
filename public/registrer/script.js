@@ -25,8 +25,4 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
     } catch (error) {
         console.error('There was a problem with the fetch operation:', error);
     }
-
-
 });
-
-

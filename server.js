@@ -36,11 +36,11 @@ app.post('/registrer', (req, res) => {
   const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
   connection.query(query, [username, md5(password)], (error, results) => {
     if (error) {
-      return res.status(500).send('Error registering user');
+      console.log(error);
+      
+      return res.status(500).send('Error registering user', error);
     }
-    
     res.status(201).json({ username, budget: null }); // Adjust as needed
-
   });
 });
 

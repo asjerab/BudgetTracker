@@ -60,6 +60,7 @@ document.getElementById("niggaTivities").addEventListener("click", async () => {
 
   document.getElementById("NewExpenssesContainer").style.display = "none";
   document.getElementById("expenssesContentWrapperDada").style.display = "block";
+  document.getElementById("openNewExpenssesButton").style.display = "block"
   loadExpenses()
 })
 

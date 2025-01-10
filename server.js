@@ -38,7 +38,9 @@ app.post('/registrer', (req, res) => {
     if (error) {
       return res.status(500).send('Error registering user');
     }
-    res.status(201).redirect("/login"); // Send suksessmelding
+    
+    res.status(201).json({ username, budget: null }); // Adjust as needed
+
   });
 });
 

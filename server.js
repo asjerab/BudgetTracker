@@ -41,7 +41,7 @@ app.post('/registrer', (req, res) => {
       
       return res.status(500).send('Error registering user', error);
     }
-    res.status(200).json({ username, budget: null }); // Adjust as needed
+    res.status(200); // Adjust as needed
   });
 });
 

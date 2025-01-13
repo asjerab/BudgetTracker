@@ -31,7 +31,8 @@ app.get('/', (req, res) => {
 
 app.post('/registrer', (req, res) => {
   const { username, password } = req.body; // Hent brukernavn og passord fra forespørselen
-
+  console.log(req.body);
+  
   // Her kan du legge til logikk for å lagre brukeren i databasen
   const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
   connection.query(query, [username, md5(password)], (error, results) => {

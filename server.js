@@ -34,7 +34,7 @@ app.post('/registrer', (req, res) => {
   console.log(req.body);
   
   // Her kan du legge til logikk for å lagre brukeren i databasen
-  const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
+  const query = 'INSERT INTO BudgetTracker.users (username, password) VALUES (?, ?)';
   connection.query(query, [username, md5(password)], (error, results) => {
     if (error) {
       console.log(error);

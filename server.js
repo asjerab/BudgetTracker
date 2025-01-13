@@ -39,7 +39,7 @@ app.post('/registrer', (req, res) => {
     if (error) {
       console.log(error);
       
-      return res.status(500).send('Error registering user', error);
+      return res.status(500);
     }
     res.status(200); // Adjust as needed
   });

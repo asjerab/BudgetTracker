@@ -14,9 +14,7 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
             })
         });
 
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
+
 
         const userData = await response.json();
         console.log(userData);

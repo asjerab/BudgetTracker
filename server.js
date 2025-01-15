@@ -31,14 +31,17 @@ app.get('/', (req, res) => {
 
 app.post('/registrer', (req, res) => {
   const { username, password } = req.body; // Hent brukernavn og passord fra forespørselen
-
+  console.log(req.body);
+  
   // Her kan du legge til logikk for å lagre brukeren i databasen
-  const query = 'INSERT INTO users (username, password) VALUES (?, ?)';
+  const query = 'INSERT INTO BudgetTracker.users (username, password) VALUES (?, ?)';
   connection.query(query, [username, md5(password)], (error, results) => {
     if (error) {
-      return res.status(500).send('Error registering user');
+      console.log(error);
+      
+      return res.status(500);
     }
-    res.status(201).redirect("/login"); // Send suksessmelding
+    res.status(200); // Adjust as needed
   });
 });
 

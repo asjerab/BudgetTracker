@@ -41,7 +41,7 @@ app.post('/registrer', (req, res) => {
       
       return res.status(500);
     }
-    res.status(200); // Adjust as needed
+    res.status(200).send("Success"); // Adjust as needed
   });
 });
 

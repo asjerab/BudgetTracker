@@ -16,7 +16,7 @@ document.getElementById("registrerForm").addEventListener('submit', async (e) =>
 
 
 
-        const userData = await response.json();
+        const userData = await response;
         console.log(userData);
 
         window.location.assign("/login")
